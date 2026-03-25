@@ -13,3 +13,7 @@
   flex: 1;
   padding: 20px;
 }
+
+body.dark .main-content {
+  background: #020617;
+}

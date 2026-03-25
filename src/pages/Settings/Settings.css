@@ -159,6 +159,47 @@
   font-weight: 500;
 }
 
+body.dark .settings-card {
+  background: #1e293b;
+  border-color: #334155;
+  box-shadow: none;
+}
+
+body.dark .settings-card h3 {
+  color: #f1f5f9;
+}
+
+body.dark .form-group label {
+  color: #cbd5f5;
+}
+
+body.dark .form-group input {
+  background-color: #0f172a;
+  color: #f1f5f9;
+  border-color: #334155;
+}
+
+body.dark .form-group input:focus {
+  border-color: #3b82f6;
+  background-color: #0f172a;
+}
+
+body.dark .toggle-title {
+  color: #f1f5f9;
+}
+
+body.dark .toggle-text {
+  color: #94a3b8;
+}
+
+body.dark .slider {
+  background-color: #475569;
+}
+
+body.dark .save-message {
+  color: #10b981;
+}
+
 @media (max-width: 640px) {
   .toggle-row {
     align-items: flex-start;

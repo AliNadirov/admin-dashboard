@@ -7,6 +7,7 @@ import { getProductsSummary } from '../../services/productService'
 import SkeletonCard from '../../components/SkeletonCard/SkeletonCard'
 import SkeletonChart from '../../components/SkeletonChart/SkeletonChart'
 import { formatNumber, formatCurrency } from '../../utils/formatters'
+import News from '../../components/News/News'
 import './Dashboard.css'
 
 
@@ -112,6 +113,9 @@ function Dashboard() {
       </div>
 
       <ChartBox data={chartData} />
+      <div style={{ marginTop: '30px' }}>
+        <News />
+      </div>
     </section>
   )
 }
