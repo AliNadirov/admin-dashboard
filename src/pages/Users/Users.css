@@ -1,0 +1,23 @@
+.users-page h2 {
+  margin-bottom: 20px;
+}
+
+.users-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.users-search {
+  width: 280px;
+  padding: 10px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+}
+
+.users-search:focus {
+  border-color: #2563eb;
+}

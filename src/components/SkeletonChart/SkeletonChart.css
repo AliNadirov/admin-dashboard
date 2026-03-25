@@ -1,0 +1,68 @@
+.skeleton-chart-box {
+  margin-top: 30px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  border: 1px solid #eef2f7;
+}
+
+.skeleton-chart-label {
+  width: 90px;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeleton-chart-heading {
+  width: 260px;
+  height: 34px;
+  margin-bottom: 26px;
+}
+
+.skeleton-chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.skeleton-bar {
+  height: 28px;
+  border-radius: 999px;
+}
+
+.bar-1 {
+  width: 100%;
+}
+
+.bar-2 {
+  width: 62%;
+}
+
+.bar-3 {
+  width: 28%;
+}
+
+.bar-4 {
+  width: 18%;
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #e5e7eb 25%,
+    #f3f4f6 50%,
+    #e5e7eb 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
+}
