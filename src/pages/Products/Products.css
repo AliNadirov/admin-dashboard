@@ -1,8 +1,8 @@
-.users-page h2 {
+.products-page h2 {
   margin-bottom: 20px;
 }
 
-.users-header {
+.products-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,4 +20,22 @@
 
 .products-search:focus {
   border-color: #2563eb;
+}
+
+body.dark .products-page h2 {
+  color: #f8fafc;
+}
+
+body.dark .products-search {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark .products-search::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .products-search:focus {
+  border-color: #3b82f6;
 }

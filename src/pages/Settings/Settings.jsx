@@ -26,10 +26,8 @@ function Settings() {
 
     if (formData.darkMode) {
       document.body.classList.add('dark')
-      localStorage.setItem('theme', 'dark')
     } else {
       document.body.classList.remove('dark')
-      localStorage.setItem('theme', 'light')
     }
   }, [formData])
 

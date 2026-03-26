@@ -50,3 +50,39 @@
   font-size: 14px;
   color: #555;
 }
+
+body.dark .data-table {
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+body.dark .data-table thead {
+  background-color: #111827;
+}
+
+body.dark .data-table th,
+body.dark .data-table td {
+  color: #e2e8f0;
+}
+
+body.dark .data-table tr {
+  border-bottom: 1px solid #1e293b;
+}
+
+body.dark .data-table tr:hover {
+  background-color: #172033;
+}
+
+body.dark .pagination-info {
+  color: #94a3b8;
+}
+
+body.dark .pagination-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+body.dark .pagination-btn:disabled {
+  background-color: #475569;
+  color: #cbd5e1;
+}

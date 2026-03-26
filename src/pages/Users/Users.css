@@ -21,3 +21,21 @@
 .users-search:focus {
   border-color: #2563eb;
 }
+
+body.dark .users-page h2 {
+  color: #f8fafc;
+}
+
+body.dark .users-search {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+body.dark .users-search::placeholder {
+  color: #94a3b8;
+}
+
+body.dark .users-search:focus {
+  border-color: #3b82f6;
+}

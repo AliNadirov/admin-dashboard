@@ -22,7 +22,7 @@ function Navbar({ searchTerm, setSearchTerm }) {
     <header className="navbar">
       <div className="navbar-left">
         <h1 className="navbar-title">Welcome Back</h1>
-        <p className="navbar-subtitle">Here is what’s happening today.</p>
+        <p className="navbar-subtitle">Here is what's happening today.</p>
       </div>
 
       <div className="navbar-right">

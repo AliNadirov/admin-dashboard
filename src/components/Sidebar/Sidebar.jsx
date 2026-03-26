@@ -5,9 +5,11 @@ function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-logo-box">AD</div>
+        <div className="sidebar-logo-box">
+          <img src="/favicon.png" alt="logo" />
+        </div>
         <div>
-          <h2 className="sidebar-logo">Admin Dashboard</h2>
+          <h2 className= "sidebar-title">Admin Dashboard</h2>
           <p className="sidebar-subtitle">Management Panel</p>
         </div>
       </div>

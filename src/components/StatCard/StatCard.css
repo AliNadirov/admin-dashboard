@@ -1,9 +1,9 @@
 .stat-card {
   background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-  padding: 16px 18px; 
+  padding: 16px 18px;
   border-radius: 16px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05); 
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
 }
 
 .stat-title {
@@ -14,10 +14,24 @@
 }
 
 .stat-value {
-  font-size: 28px; 
+  font-size: 28px;
   font-weight: 700;
   line-height: 1;
   color: #111827;
+}
+
+body.dark .stat-card {
+  background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  border-color: #1e293b;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+body.dark .stat-title {
+  color: #94a3b8;
+}
+
+body.dark .stat-value {
+  color: #f8fafc;
 }
 
 @media (max-width: 768px) {

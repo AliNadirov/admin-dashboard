@@ -23,7 +23,7 @@ function getRoundedMax(value) {
 
 function getTicks(maxValue) {
   const roundedMax = getRoundedMax(maxValue)
-  const step = roundedMax <= 5000 ? 1000 : 1000
+  const step = 1000
   const ticks = []
 
   for (let i = 0; i <= roundedMax; i += step) {
@@ -47,6 +47,9 @@ function CustomTooltip({ active, payload }) {
 }
 
 function ChartBox({ data = [] }) {
+  const isDark = document.body.classList.contains('dark')
+  const axisColor = isDark ? '#94a3b8' : '#6b7280'
+
   const sortedData = [...data].sort((a, b) => b.value - a.value)
   const maxValue = Math.max(...sortedData.map((item) => item.value), 0)
   const roundedMax = getRoundedMax(maxValue)
@@ -68,7 +71,12 @@ function ChartBox({ data = [] }) {
             layout="vertical"
             margin={{ top: 10, right: 20, left: 20, bottom: 10 }}
           >
-            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
+            <CartesianGrid
+              stroke="rgba(148, 163, 184, 0.15)"
+              strokeDasharray="3 3"
+              horizontal={true}
+              vertical={false}
+            />
             <XAxis
               type="number"
               domain={[0, roundedMax]}
@@ -76,6 +84,7 @@ function ChartBox({ data = [] }) {
               tickFormatter={(value) => `$${value}`}
               axisLine={false}
               tickLine={false}
+              tick={{ fill: axisColor }}
             />
             <YAxis
               type="category"
@@ -83,8 +92,9 @@ function ChartBox({ data = [] }) {
               axisLine={false}
               tickLine={false}
               width={100}
+              tick={{ fill: axisColor }}
             />
-            <Tooltip content={<CustomTooltip />} cursor={{ fill: 'rgba(37, 99, 235, 0.08)' }} />
+            <Tooltip content={<CustomTooltip />} cursor={false} />
             <Bar dataKey="value" radius={[0, 10, 10, 0]} barSize={26}>
               {sortedData.map((entry, index) => (
                 <Cell
