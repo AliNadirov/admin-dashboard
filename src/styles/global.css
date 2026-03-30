@@ -4,10 +4,18 @@
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f5f6fa;
   color: #222;
+  overflow-x: hidden;
 }
 
 a {
@@ -29,6 +37,14 @@ textarea {
 img {
   max-width: 100%;
   display: block;
+}
+
+table,
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
 }
 
 body.dark {

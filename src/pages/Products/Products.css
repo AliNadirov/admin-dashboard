@@ -6,11 +6,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 .products-search {
   width: 280px;
+  max-width: 100%;
   padding: 10px 14px;
   border: 1px solid #d1d5db;
   border-radius: 8px;
@@ -38,4 +40,15 @@ body.dark .products-search::placeholder {
 
 body.dark .products-search:focus {
   border-color: #3b82f6;
+}
+
+@media (max-width: 640px) {
+  .products-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .products-search {
+    width: 100%;
+  }
 }

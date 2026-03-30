@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
 }
 
 .sidebar-header {
@@ -87,5 +88,74 @@ body.dark .sidebar .nav-link.active {
 
   .sidebar-title {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 14px 12px;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .sidebar-header {
+    margin-bottom: 12px;
+  }
+
+  .sidebar-logo-box {
+    width: 44px;
+    height: 44px;
+  }
+
+  .sidebar-title {
+    font-size: 18px;
+  }
+
+  .sidebar-subtitle {
+    font-size: 11px;
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .sidebar-menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .sidebar-menu a {
+    white-space: nowrap;
+    min-height: 40px;
+    padding: 0 12px;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    padding: 12px 10px;
+  }
+
+  .sidebar-header {
+    gap: 10px;
+  }
+
+  .sidebar-title {
+    font-size: 16px;
+  }
+
+  .sidebar-subtitle {
+    display: none;
+  }
+
+  .sidebar-menu a {
+    font-size: 14px;
+    padding: 0 10px;
   }
 }

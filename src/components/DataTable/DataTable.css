@@ -1,5 +1,12 @@
+.data-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 .data-table {
   width: 100%;
+  min-width: 700px;
   border-collapse: collapse;
   background-color: #fff;
   border-radius: 12px;
@@ -10,6 +17,7 @@
 .data-table td {
   padding: 12px;
   text-align: left;
+  white-space: nowrap;
 }
 
 .data-table thead {
@@ -30,6 +38,7 @@
   justify-content: flex-end;
   gap: 12px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .pagination-btn {
@@ -85,4 +94,16 @@ body.dark .pagination-btn {
 body.dark .pagination-btn:disabled {
   background-color: #475569;
   color: #cbd5e1;
+}
+
+@media (max-width: 640px) {
+  .pagination {
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .pagination-info {
+    width: 100%;
+    order: -1;
+  }
 }

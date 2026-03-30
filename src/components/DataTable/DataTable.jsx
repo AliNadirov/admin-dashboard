@@ -10,29 +10,31 @@ function DataTable({
 }) {
   return (
     <>
-      <table className="data-table">
-        <thead>
-          <tr>
-            {columns.map((column) => (
-              <th key={column.key}>{column.label}</th>
-            ))}
-          </tr>
-        </thead>
-
-        <tbody>
-          {data.map((item) => (
-            <tr key={item.id}>
+      <div className="data-table-wrapper">
+        <table className="data-table">
+          <thead>
+            <tr>
               {columns.map((column) => (
-                <td key={column.key}>
-                  {typeof column.render === 'function'
-                    ? column.render(item)
-                    : item[column.key]}
-                </td>
+                <th key={column.key}>{column.label}</th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+
+          <tbody>
+            {data.map((item) => (
+              <tr key={item.id}>
+                {columns.map((column) => (
+                  <td key={column.key}>
+                    {typeof column.render === 'function'
+                      ? column.render(item)
+                      : item[column.key]}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
 
       <div className="pagination">
         <button
