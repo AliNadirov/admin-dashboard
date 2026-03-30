@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Suspense, lazy } from 'react'
 import StatCard from '../../components/StatCard/StatCard'
-import ChartBox from '../../components/ChartBox/ChartBox'
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage'
 import { getUsersCount } from '../../services/userService'
 import { getProductsSummary } from '../../services/productService'
@@ -9,6 +8,7 @@ import SkeletonChart from '../../components/SkeletonChart/SkeletonChart'
 import { formatNumber, formatCurrency } from '../../utils/formatters'
 import './Dashboard.css'
 
+const ChartBox = lazy(() => import('../../components/ChartBox/ChartBox'))
 
 function Dashboard() {
   const [stats, setStats] = useState({
@@ -91,6 +91,7 @@ function Dashboard() {
       </section>
     )
   }
+
   if (error) {
     return (
       <section className="dashboard-page">
@@ -111,8 +112,11 @@ function Dashboard() {
         <StatCard title="Categories" value={formatNumber(stats.categories)} />
       </div>
 
-      <ChartBox data={chartData} />
-       {/* Future backend feature: industry news feed with images and live category-based articles. */}
+      <Suspense fallback={<SkeletonChart />}>
+        <ChartBox data={chartData} />
+      </Suspense>
+
+      {/* Future backend feature: industry news feed with images and live category-based articles. */}
     </section>
   )
 }
